@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:form/contant/color.dart';
 import 'package:form/pages/form.dart';
 
 class Homepage extends StatefulWidget {
@@ -12,33 +13,35 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 242, 218, 145),
+        backgroundColor: tdblue,
+        elevation: 0,
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Task Manager",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                    color: Colors.black),
-              ),
+            // Icon(
+            //   Icons.menu,
+            //   color: tdwhite,
+            //   size: 30,
+            // ),
+            Center(
+              child: Text("Task MAnager"),
             ),
-            Spacer(),
-            IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.history,
-                  color: Colors.black,
-                )),
-            IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.settings,
-                  color: Colors.black,
-                ))
+            Container(
+              height: 40.0,
+              width: 40.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(50),
+                child: Image.asset(
+                  'images/pizza2.jpg',
+                  fit: BoxFit.cover,
+                ),
+              ),
+            )
           ],
         ),
       ),
@@ -48,20 +51,20 @@ class _HomepageState extends State<Homepage> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Color.fromARGB(255, 234, 234, 201),
-                ),
-                height: 50,
-                width: 490,
-                child: Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Text(
-                    "You have [0] pennding task out of [10]",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Color.fromARGB(255, 234, 234, 201),
                   ),
-                ),
-              ),
+                  height: 50,
+                  width: 490,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(Icons.search),
+                      ),
+                    ],
+                  )),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),

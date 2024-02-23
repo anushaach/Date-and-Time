@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:form/pages/form.dart';
+import 'package:form/pages/homepage.dart';
 import 'package:form/pages/splashScreen.dart';
 
 void main() {
@@ -12,6 +13,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: Splash());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: Homepage());
   }
 }
